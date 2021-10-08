@@ -41,7 +41,9 @@ export default class LoanRequests extends Component {
         <p>{this.state.statusText}</p> :
         this.state.loanRequests.map((_,i) => {
           return <article className='addr-item' key={i}>
-            {_.loanRequestId} {_.date} {_.borrowerId} {_.amount} {_.description} {_.payday} {_.borrower}
+            {Object.keys(_).map((k,i) => {
+                return <strong>{k}: {_[k]}</strong>
+            })}
             </article>
         })}
 
