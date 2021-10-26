@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
-  --primary-color: #007e15;
+  --primary-color: #007AF3;
 }
 
 body {
@@ -391,4 +391,4 @@ nav li a:hover {
     top: 2em;
   }
 }
-/*# sourceMappingURL=custom.css.map */
+/*# sourceMappingURL=main.css.map */

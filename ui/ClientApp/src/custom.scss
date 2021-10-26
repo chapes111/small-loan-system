@@ -106,8 +106,8 @@ ul.features-list {
   padding-left: .1em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(19rem, 1fr) [auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 }
 
 ul.features-list li {
@@ -171,7 +171,7 @@ input, textarea {
   border-radius: .3em;
   border: 1px solid gray;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -239,18 +239,18 @@ nav li a:hover {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 180px auto;
-    grid-template-columns: 180px auto;
+        grid-template-columns: 180px auto;
     -webkit-box-pack: unset;
-    -ms-flex-pack: unset;
-    justify-content: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
   .navbar nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background: none;
     position: unset;
     height: auto;
@@ -299,8 +299,8 @@ nav li a:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     text-align: left;
   }
   .hero .container .left-col {
@@ -391,4 +391,4 @@ nav li a:hover {
     top: 2em;
   }
 }
-/*# sourceMappingURL=custom.css.map */
+/*# sourceMappingURL=main.css.map */

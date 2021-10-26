@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/bd981ac0-50b0-4374-bcd1-384dc134c944/resourceGroups/small-loan-system/providers/Microsoft.Web/sites/small-loan-system"
+}

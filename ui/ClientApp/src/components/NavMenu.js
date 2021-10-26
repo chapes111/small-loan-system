@@ -1,6 +1,7 @@
 ﻿import React, { Component } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import menuIcon from '../../src/images/menu.svg';
+import menuExit from '../../src/images/exit.svg';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -15,36 +16,43 @@ export class NavMenu extends Component {
   }
 
   toggleNavbar () {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
+        const mobileBtn = document.getElementById('mobile-cta');
+        const nav = document.querySelector('nav');
+        const mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        });
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        });
   }
 
   render () {
     return (
-      <header className='header'>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
-          <Container>
-            <NavbarBrand tag={Link} to="/">small_loan_system</NavbarBrand>
-            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-            <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-              <ul className="navbar-nav flex-grow">
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/Addressees">Addressees</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/Loan">Loan Requests</NavLink>
-                </NavItem>
-                {/* <LoginMenu>
-                </LoginMenu> */}
+        <div className='navbar' light>
+          <div className='container'>
+            <a className='logo' href="/">small_loan_system</a>
+
+            <img id='mobile-cta' className='mobile-menu' onClick={this.toggleNavbar} src={menuIcon} alt='Open Navigation' />
+
+            <nav>
+              <img id='mobile-exit' class='mobile-menu-exit' src={menuExit} alt="" />
+              <ul className="primary-nav">
+                  <li className="current"><Link to='/'>Home</Link></li>
+                  <li><Link to='/Addressees'>Addressees</Link></li>
               </ul>
-            </Collapse>
-          </Container>
-        </Navbar>
-      </header>
+              <ul className='secondary-nav'>
+                  <li className='go-premium-cta'>
+                    <Link to='/LoanRequests'>Loan Requests</Link>
+                  </li>
+              </ul>
+            </nav>
+          </div>
+
+          
+        </div>
     );
   }
 }
