@@ -84,7 +84,7 @@ export class Home extends Component {
                   </form>
               </div>
               <div class="contact-right">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12721.864543968763!2d-80.41269727994272!3d37.1416143271143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884d93ac2bbae191%3A0xcec10c5df9810d32!2sBeverly%20Hills%2C%20Christiansburg%2C%20VA%2024073!5e0!3m2!1sen!2sus!4v1634927574141!5m2!1sen!2sus" width="600" height="450" style={{border: '0'}} allowfullscreen="" loading="lazy"></iframe>
+                  <iframe title='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12721.864543968763!2d-80.41269727994272!3d37.1416143271143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884d93ac2bbae191%3A0xcec10c5df9810d32!2sBeverly%20Hills%2C%20Christiansburg%2C%20VA%2024073!5e0!3m2!1sen!2sus!4v1634927574141!5m2!1sen!2sus" width="600" height="450" style={{border: '0'}} allowfullscreen="" loading="lazy"></iframe>
               </div>
           </div>
         </section>

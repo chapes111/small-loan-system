@@ -391,4 +391,37 @@ nav li a:hover {
     top: 2em;
   }
 }
+
+ul.addr-list {
+  color: red;
+  margin: 0;
+  padding-left: .1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+
+.addr-container li {
+  background: #444444;
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: .5em auto .5em auto;
+  border-radius: 1em;
+
+  .name {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+
+  .address {
+    text-align: center;
+    display: block;
+    font-style: italic;
+    font-variant: small-caps;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

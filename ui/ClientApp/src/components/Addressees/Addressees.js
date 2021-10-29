@@ -27,18 +27,20 @@ export default class Addressees extends Component {
 
   render() {
     return (
-      <div className='addrs'>
-
+      <div className='addr-container'>
+        <ul className='addr-list'>
           <button
             onClick={() => {window.location = '/Addressees/new'}}>
               Create New
               </button>
+          {this.state.loading ?
+          <p className='status-text'>{this.state.statusText}</p> :
+          this.state.addressees.map((_,i) => {
+            return <li className='addr-item' key={i}><span className='name'>{_.name}</span> <span className='address'>{_.address}</span></li>
+          })}
+        </ul>
 
-        {this.state.loading ?
-        <p>{this.state.statusText}</p> :
-        this.state.addressees.map((_,i) => {
-          return <article className='addr-item' key={i}>{_.name} {_.address}</article>
-        })}
+
       </div>
     )
   }
