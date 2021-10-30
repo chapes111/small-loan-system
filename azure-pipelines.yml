@@ -10,23 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
     projects: '**/*.csproj'
-
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: '/ui/ClientApp'
-
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    workingDir: '/ui/ClientApp'
-    customCommand: 'run build'
